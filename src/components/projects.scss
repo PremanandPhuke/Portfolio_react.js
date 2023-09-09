@@ -1,0 +1,79 @@
+@import "../style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+
+.projects {
+        @include themify($themes) {
+
+                // border: 1px solid white;
+                height: 100%;
+                // width: 0%;
+                padding: 130px 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                // background-color: themed("bg");
+                color: themed("textColor");
+                overflow: hidden;
+                h1{
+                        font-family: 'Marcellus', serif;
+            
+                    }
+                .line {
+                        margin: 50px;
+                        background-color: themed("bg");
+
+                        .vertical-timeline-element {
+                                background-color: transparent;
+
+                                .first {
+
+                                        background-color: black;
+                                        color: white;
+
+                                        h2 {
+                                                color: white;
+                                                background-color: black;
+                                                @include mobile {
+                                                        font-size: 15px;
+                                                 }
+         
+
+                                        }
+
+                                        p {
+                                                background-color: black;
+                                                @include mobile {
+                                                        display: none;
+                                                 }
+                                        }
+
+                                        button {
+
+                                                margin: 10px 0;
+                                                padding:0 5px ;
+                                                margin-right: 10px;
+                                                border: 1px solid white;
+                                                height: 40px;
+                                                width: max-content;
+                                                font-weight: 600;
+                                                
+
+                                                a {
+                                                        text-decoration: none;
+                                                        color: themed("textColor");
+                                                }
+                                        }
+
+                                        
+                                }
+
+
+                        }
+                }
+
+                @include mobile {
+                        padding: 130px 70px;
+                 }
+        }
+}

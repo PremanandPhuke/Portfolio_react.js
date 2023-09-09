@@ -1,0 +1,30 @@
+@import "../style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+
+.connect {
+
+    // border: 1px solid white;
+    @include themify($themes) {
+
+        height: 100%;
+        padding: 130px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: themed("bg");
+        color: themed("textColor");
+        overflow: hidden;
+        h1{
+            font-family: 'Marcellus', serif;
+
+        }
+
+        @include mobile {
+            padding: 130px 50px;
+
+        }
+       
+    }
+
+}

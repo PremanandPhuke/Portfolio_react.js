@@ -1,0 +1,58 @@
+@import "../style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+
+.regards {
+    @include themify($themes) {
+
+        height: 390px;
+        padding: 100px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: themed("bg");
+        color: themed("textColor");
+        overflow: hidden;
+        gap: 20px;
+
+        h1 {
+            font-family: 'Marcellus', serif;
+
+            @include mobile{
+               font-size: 20px;
+            }
+        }
+
+        img {
+            align-self: center;
+            margin: 50px;
+            height: 250px;
+            width: 370px;
+
+        }
+
+
+        .social {
+            cursor: pointer;
+            gap: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            // line-height: 50px;
+
+            a {
+                text-decoration: none;
+                color: themed("textColor");
+            }
+        }
+
+        @include mobile{
+        padding: 150px 50px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+@import "../style.scss";
+
+
+.ContactUs {
+
+    // border: 1px solid white; 
+    @include themify($themes) {
+
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        overflow: hidden;
+
+        // gap: 20px;
+        .left {
+            width: 50%;
+
+            form {
+                // border: 1px solid white;
+
+                height: min-content;
+                padding: 20px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                overflow: hidden;
+                gap: 20px;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+
+                    .lable {
+                        // padding: 10px;
+                        font-size: 30px;
+                        // background-color: themed("bg");
+                        color: themed("textColor");
+                    }
+
+                    input {
+                        // background-color: themed("bg");
+                        color: themed("textColor");
+                        padding: 10px;
+                        border-radius: 5px;
+                        width: 86%;
+                        border: 0.5 px solid themed("border");
+                    }
+
+                    textarea {
+                        // background-color: themed("bg");
+                        color: themed("textColor");
+                        width: 90%;
+                        height: 150px;
+                        border-radius: 5px;
+                        border: 0.5 px solid themed("border");
+
+                    }
+
+
+                }
+
+                #send {
+                    cursor: pointer;
+                    // background-color: themed("bg");
+                    color: themed("textColor");
+                    margin: 0 20px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: 85%;
+                    border: hidden;
+                    background: rgb(203, 38, 221);
+                }
+
+
+
+            }
+
+            @include mobile {
+                width: 100%;
+                padding: 20px 0px;
+            }
+        }
+
+
+        .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+
+            img {
+                height: 550px;
+                width: 500px;
+
+                @include tablet {
+                    height: 350px;
+                    width: 300px;
+                }
+            }
+
+            @include mobile {
+                width: 100%;
+
+            }
+        }
+
+
+
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+}

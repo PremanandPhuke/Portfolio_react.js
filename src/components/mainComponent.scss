@@ -1,0 +1,89 @@
+@import "../style.scss";
+
+.mainComponent {
+    @include themify($themes) {
+
+        // border: 1px solid white;
+        height: 100%;
+        padding: 20px 100px;
+        padding-bottom: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: themed("bg");
+        color: themed("textColor");
+        cursor: pointer;
+        overflow: hidden;
+
+        @include mobile {
+            padding: 100px 80px;
+        }
+
+        div {
+            // position: absolute;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+
+            h2 {
+                font-size: 120px;
+                @include mobile {
+                    font-size: 50px;
+                }
+            }
+
+
+            
+
+            button {
+                // position: absolute;
+                padding: 10px;
+                position: relative;
+                height: 180px;
+                width: 180px;
+                border-radius: 50%;
+                background-color: themed("bg");
+                color: themed("textColor");
+                border: 1px solid themed("border");
+
+                @include tablet {
+                    display: none;
+                }
+
+            }
+
+
+
+        }
+
+        span {
+
+            margin-top: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+
+            h1 {
+                font-size: 80px;
+
+                
+                @include tablet {
+                    font-size: 50px;
+                }
+    
+                @include mobile {
+                    font-size: 40px;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        @include mobile{
+        padding: 60px 50px;
+            gap: 20px
+            ;
+        }
+    }
+}
